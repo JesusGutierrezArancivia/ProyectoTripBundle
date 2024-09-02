@@ -1,6 +1,7 @@
 package pe.edu.upc.tripbundle.dtos;
 
 import jakarta.persistence.Column;
+import pe.edu.upc.tripbundle.entities.City;
 
 import java.time.LocalDate;
 
@@ -12,6 +13,8 @@ public class SeasonDTO {
     private LocalDate startDateSeason;
 
     private LocalDate endDateSeason;
+
+    private City ci;
 
     public int getIdSeason() {
         return idSeason;
@@ -43,5 +46,13 @@ public class SeasonDTO {
 
     public void setEndDateSeason(LocalDate endDateSeason) {
         this.endDateSeason = endDateSeason;
+    }
+
+    public City getCi() {
+        return ci;
+    }
+
+    public void setCi(City ci) {
+        this.ci = ci;
     }
 }

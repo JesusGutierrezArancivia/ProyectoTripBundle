@@ -11,4 +11,6 @@ public interface IFaunaService {
     public void insert(Fauna fauna);
 
     public void update(Fauna fauna);
+
+    public void delete(int id);
 }

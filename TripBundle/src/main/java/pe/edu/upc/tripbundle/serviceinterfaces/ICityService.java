@@ -5,5 +5,11 @@ import pe.edu.upc.tripbundle.entities.City;
 import java.util.List;
 
 public interface ICityService {
-    public List <City> list();
+    public List<City> list();
+
+    public void insert(City city);
+
+    public void update(City city);
+
+    public void delete(int id);
 }

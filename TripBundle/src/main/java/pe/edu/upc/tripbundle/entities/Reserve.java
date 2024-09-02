@@ -14,16 +14,22 @@ public class Reserve {
     @Column(name = "descriptionReserve",nullable = false,length = 70)
     private String descriptionReserve;
 
-    @Column(name = "dateReserve",nullable = false)
-    private LocalDate dateReserve;
+    @ManyToOne
+    @JoinColumn(name="idActivity")
+    private Activity ac;
+
+    @ManyToOne
+    @JoinColumn(name="idCity")
+    private City ci;
 
     public Reserve() {
     }
 
-    public Reserve(int idReserve, String descriptionReserve, LocalDate dateReserve) {
+    public Reserve(int idReserve, String descriptionReserve, Activity ac, City ci) {
         this.idReserve = idReserve;
         this.descriptionReserve = descriptionReserve;
-        this.dateReserve = dateReserve;
+        this.ac=ac;
+        this.ci=ci;
     }
 
     public int getIdReserve() {
@@ -42,11 +48,19 @@ public class Reserve {
         this.descriptionReserve = descriptionReserve;
     }
 
-    public LocalDate getDateReserve() {
-        return dateReserve;
+    public Activity getAc() {
+        return ac;
     }
 
-    public void setDateReserve(LocalDate dateReserve) {
-        this.dateReserve = dateReserve;
+    public void setAc(Activity ac) {
+        this.ac = ac;
+    }
+
+    public City getCi() {
+        return ci;
+    }
+
+    public void setAc(City ci) {
+        this.ci = ci;
     }
 }

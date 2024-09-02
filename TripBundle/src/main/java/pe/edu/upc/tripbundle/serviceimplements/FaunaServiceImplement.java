@@ -26,4 +26,9 @@ public class FaunaServiceImplement implements IFaunaService {
     public void update(Fauna fauna) {
         fR.save(fauna);
     }
+
+    @Override
+    public void delete(int id) {
+        fR.deleteById(id);
+    }
 }

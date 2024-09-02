@@ -1,6 +1,8 @@
 package pe.edu.upc.tripbundle.dtos;
 
 import jakarta.persistence.Column;
+import pe.edu.upc.tripbundle.entities.Activity;
+import pe.edu.upc.tripbundle.entities.City;
 
 import java.time.LocalDate;
 
@@ -9,6 +11,8 @@ public class ReserveDTO {
     private int idReserve;
     private String descriptionReserve;
     private LocalDate dateReserve;
+    private Activity ac;
+    private City ci;
 
     public int getIdReserve() {
         return idReserve;
@@ -26,11 +30,19 @@ public class ReserveDTO {
         this.descriptionReserve = descriptionReserve;
     }
 
-    public LocalDate getDateReserve() {
-        return dateReserve;
+    public Activity getAc() {
+        return ac;
     }
 
-    public void setDateReserve(LocalDate dateReserve) {
-        this.dateReserve = dateReserve;
+    public void setAc(Activity ac) {
+        this.ac = ac;
+    }
+
+    public City getCi() {
+        return ci;
+    }
+
+    public void setCi(City ci) {
+        this.ci = ci;
     }
 }

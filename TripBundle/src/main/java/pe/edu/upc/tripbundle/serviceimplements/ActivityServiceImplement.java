@@ -5,7 +5,6 @@ import org.springframework.stereotype.Service;
 import pe.edu.upc.tripbundle.entities.Activity;
 import pe.edu.upc.tripbundle.repositories.IActivityRepository;
 import pe.edu.upc.tripbundle.serviceinterfaces.IActivityService;
-import pe.edu.upc.tripbundle.serviceinterfaces.IActivityService;
 
 import java.util.List;
 

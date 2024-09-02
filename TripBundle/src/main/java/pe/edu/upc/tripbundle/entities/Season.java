@@ -20,14 +20,19 @@ public class Season {
     @Column(name = "endDateSeason",nullable = false)
     private LocalDate endDateSeason;
 
+    @ManyToOne
+    @JoinColumn(name="idCity")
+    private City ci;
+
     public Season() {
     }
 
-    public Season(int idSeason, String nameSeason, LocalDate startDateSeason, LocalDate endDateSeason) {
+    public Season(int idSeason, String nameSeason, LocalDate startDateSeason, LocalDate endDateSeason, City ci) {
         this.idSeason = idSeason;
         this.nameSeason = nameSeason;
         this.startDateSeason = startDateSeason;
         this.endDateSeason = endDateSeason;
+        this.ci=ci;
     }
 
     public int getIdSeason() {
@@ -60,5 +65,13 @@ public class Season {
 
     public void setEndDateSeason(LocalDate endDateSeason) {
         this.endDateSeason = endDateSeason;
+    }
+
+    public City getCi() {
+        return ci;
+    }
+
+    public void setCi(City ci) {
+        this.ci = ci;
     }
 }
