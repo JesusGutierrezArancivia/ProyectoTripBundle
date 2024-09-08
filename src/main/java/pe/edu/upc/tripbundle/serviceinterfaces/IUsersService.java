@@ -12,5 +12,4 @@ public interface IUsersService {
         public void update(Users users);
 
         public void delete(int id);
-
 }
