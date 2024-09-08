@@ -11,5 +11,4 @@ public interface ISeasonService {
 
     public void update(Season season);
 
-    public void delete(int id);
 }

@@ -18,4 +18,15 @@ public class CityServiceImplement implements ICityService {
     public List<City> list() {
         return cR.findAll();
     }
+
+    @Override
+    public void insert(City city) {
+        cR.save(city);
+    }
+
+    @Override
+    public void update(City city) {
+        cR.save(city);
+    }
+
 }

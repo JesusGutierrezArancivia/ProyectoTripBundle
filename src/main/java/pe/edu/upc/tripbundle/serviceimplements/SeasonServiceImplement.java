@@ -28,8 +28,4 @@ public class SeasonServiceImplement implements ISeasonService {
         sR.save(season);
     }
 
-    @Override
-    public void delete(int id) {
-        sR.deleteById(id);
-    }
 }
